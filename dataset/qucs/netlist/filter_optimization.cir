@@ -1,0 +1,18 @@
+# Qucs 0.0.19  C:/github/net2sch_ai/dataset/qucs/schematics/filter_optimization.sch
+
+Pac:P1 _net0 gnd Num="1" Z="50 Ohm" P="0 dBm" f="1 GHz" Temp="26.85"
+L:L1 _net1 _net2 L="L2" I=""
+L:L3 _net0 _net1 L="L1" I=""
+C:C1 gnd _net0 C="C1" V=""
+C:C2 gnd _net1 C="C2" V=""
+C:C3 gnd _net2 C="C3" V=""
+L:L2 _net2 _net3 L="L3" I=""
+C:C4 gnd _net3 C="C4" V=""
+Pac:P2 _net3 gnd Num="2" Z="50 Ohm" P="0 dBm" f="1 GHz" Temp="26.85"
+.SP:SP1 Type="log" Start="1MHz" Stop="200MHz" Points="233" Noise="no" NoiseIP="1" NoiseOP="2" saveCVs="no" saveAll="no"
+Eqn:Eqn2 S21_dB="dB(S[2,1])" S11_dB="dB(S[1,1])" S22_dB="dB(S[2,2])" Export="yes"
+#
+# ASCO configuration file(s) created
+#
+
+Eqn:Eqn1 f0="1e6" f1="31e6" fs="45e6" Max_Gain="max(dB(S[2,1]), f0:f1)" Min_Gain="min(dB(S[2,1]), f0:f1)" Min_S11="max(dB(S[1,1]), f0:f1)" Min_Rej="-max(dB(S[2,1]), fs:200e6)" Ripple="Max_Gain-Min_Gain" Export="yes"

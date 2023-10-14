@@ -1,0 +1,12 @@
+# Qucs 0.0.19  C:/github/net2sch_ai/dataset/qucs/schematics/flicker.sch
+
+Vnoise:V1 _net0 gnd u="Kf" e="Ffe" c="1" a="0"
+CCVS:SRC1 _net1 _net2 gnd _net3 G="1" T="0"
+EDD:D1 _net0 gnd _net5 _net4 _net2 gnd I1="D1.I1" Q1="D1.Q1" I2="D1.I2" Q2="D1.Q2" I3="D1.I3" Q3="D1.Q3"
+  Eqn:EqnD1I1 D1.I1="0" Export="no"
+  Eqn:EqnD1Q1 D1.Q1="0" Export="no"
+  Eqn:EqnD1I2 D1.I2="(V3+1e-20)^(0.5*Af)*(V1)" Export="no"
+  Eqn:EqnD1Q2 D1.Q2="0" Export="no"
+  Eqn:EqnD1I3 D1.I3="0" Export="no"
+  Eqn:EqnD1Q3 D1.Q3="0" Export="no"
+DCFeed:L1 _net1 _net6 L="1 uH"
