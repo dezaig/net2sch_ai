@@ -1,0 +1,11 @@
+# Qucs 0.0.19  C:/github/net2sch_ai/dataset/qucs/schematics/pentode.sch
+
+EDD:D1 _net0 _net1 _net2 _net1 _net3 _net1 _net0 _net2 I1="D1.I1" Q1="D1.Q1" I2="D1.I2" Q2="D1.Q2" I3="D1.I3" Q3="D1.Q3" I4="D1.I4" Q4="D1.Q4"
+  Eqn:EqnD1I1 D1.I1="V1 > 0 ? V1/RGK : 0" Export="no"
+  Eqn:EqnD1Q1 D1.Q1="Cgk*V1" Export="no"
+  Eqn:EqnD1I2 D1.I2="(V1 + V3/u) >= 0 ? ((V1 + V3/u)^(3/2))*(2/k)*arctan(V2/kvb) : 0" Export="no"
+  Eqn:EqnD1Q2 D1.Q2="Cak*V2" Export="no"
+  Eqn:EqnD1I3 D1.I3="(V1 + V3/u) >= 0 ? ((V1 + V3/u)^(3/2))/kg2 : 0" Export="no"
+  Eqn:EqnD1Q3 D1.Q3="0" Export="no"
+  Eqn:EqnD1I4 D1.I4="0" Export="no"
+  Eqn:EqnD1Q4 D1.Q4="Cag*V4" Export="no"
